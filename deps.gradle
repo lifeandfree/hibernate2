@@ -1,0 +1,7 @@
+ext {
+    deps = [
+            "hibernate": "org.hibernate:hibernate-core:5.4.10.Final",
+            "h2": "com.h2database:h2:1.4.195",
+            "postgresql" : "org.postgresql:postgresql:42.2.14"
+    ]
+}

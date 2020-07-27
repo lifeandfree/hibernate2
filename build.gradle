@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+apply from: "$rootDir/deps.gradle"
+allprojects {
+
+    sourceCompatibility = 11
+    targetCompatibility = 11
+
+    group 'ru.innopolis'
+    version '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+dependencies {
+    implementation deps."hibernate"
+    implementation deps."postgresql"
+}
+
+subprojects {
+    task allDeps(type: DependencyReportTask) {}
+}
